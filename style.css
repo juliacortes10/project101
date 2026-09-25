@@ -1,0 +1,644 @@
+/* ==================================================
+   PASTEL PORTFOLIO
+================================================== */
+
+
+:root {
+
+    --cream: #faf6f2;
+
+    --white: #fffdfb;
+
+    --rose: #d9aeb8;
+
+    --rose-dark: #a97884;
+
+    --lavender: #d7cee5;
+
+    --peach: #edc9b7;
+
+    --sage: #c8d5c2;
+
+    --brown: #554b4c;
+
+    --muted: #887d7d;
+
+    --shadow:
+        0 20px 60px rgba(100, 80, 80, 0.08);
+
+}
+
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+
+body {
+
+    background: var(--cream);
+
+    color: var(--brown);
+
+    font-family:
+        "Helvetica Neue",
+        Arial,
+        sans-serif;
+
+    overflow-x: hidden;
+
+}
+
+
+/* ==================================================
+   GENERAL
+================================================== */
+
+
+button {
+
+    font: inherit;
+
+}
+
+
+.hidden {
+
+    display: none !important;
+
+}
+
+
+.eyebrow {
+
+    font-size: 10px;
+
+    letter-spacing: 4px;
+
+    color: var(--rose-dark);
+
+    margin-bottom: 18px;
+
+}
+
+
+/* ==================================================
+   INTRO
+================================================== */
+
+
+.intro {
+
+    height: 100vh;
+
+    min-height: 600px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    position: relative;
+
+    overflow: hidden;
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+
+}
+
+
+.intro.fade-out {
+
+    opacity: 0;
+
+    transform: scale(1.03);
+
+}
+
+
+.intro-text {
+
+    position: relative;
+
+    z-index: 5;
+
+    padding: 30px;
+
+}
+
+
+.intro h1 {
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size:
+        clamp(55px, 10vw, 110px);
+
+    font-weight: 400;
+
+    line-height: 0.95;
+
+    margin-bottom: 25px;
+
+}
+
+
+.intro-text > p:not(.eyebrow) {
+
+    color: var(--muted);
+
+    line-height: 1.8;
+
+    max-width: 500px;
+
+    margin: auto;
+
+}
+
+
+/* ==================================================
+   BUTTON
+================================================== */
+
+
+.primary-button {
+
+    margin-top: 35px;
+
+    padding:
+        14px 30px;
+
+    border:
+        1px solid var(--rose-dark);
+
+    border-radius: 50px;
+
+    background: transparent;
+
+    color: var(--brown);
+
+    cursor: pointer;
+
+    transition:
+        background 0.4s ease,
+        color 0.4s ease,
+        transform 0.4s ease;
+
+}
+
+
+.primary-button:hover {
+
+    background: var(--rose);
+
+    color: white;
+
+    transform: translateY(-3px);
+
+}
+
+
+/* ==================================================
+   BUTTERFLY
+================================================== */
+
+
+.butterfly {
+
+    width: 65px;
+
+    height: 60px;
+
+    position: absolute;
+
+    z-index: 20;
+
+}
+
+
+.wing {
+
+    position: absolute;
+
+    width: 28px;
+
+    height: 38px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--rose),
+            var(--lavender)
+        );
+
+    opacity: 0.82;
+
+}
+
+
+.left-wing {
+
+    left: 3px;
+
+    top: 8px;
+
+    border-radius:
+        70% 30% 70% 30%;
+
+    transform-origin:
+        100% 50%;
+
+}
+
+
+.right-wing {
+
+    right: 3px;
+
+    top: 8px;
+
+    border-radius:
+        30% 70% 30% 70%;
+
+    transform-origin:
+        0% 50%;
+
+}
+
+
+.body {
+
+    position: absolute;
+
+    width: 5px;
+
+    height: 36px;
+
+    background: var(--brown);
+
+    border-radius: 50%;
+
+    left: 50%;
+
+    top: 12px;
+
+    transform:
+        translateX(-50%);
+
+}
+
+
+.antenna {
+
+    position: absolute;
+
+    width: 18px;
+
+    height: 1px;
+
+    background: var(--brown);
+
+    top: 10px;
+
+}
+
+
+.left-antenna {
+
+    left: 20px;
+
+    transform: rotate(-30deg);
+
+}
+
+
+.right-antenna {
+
+    right: 20px;
+
+    transform: rotate(30deg);
+
+}
+
+
+/* Butterfly wing movement */
+
+.butterfly .left-wing {
+
+    animation:
+        flap-left 0.7s
+        ease-in-out
+        infinite
+        alternate;
+
+}
+
+
+.butterfly .right-wing {
+
+    animation:
+        flap-right 0.7s
+        ease-in-out
+        infinite
+        alternate;
+
+}
+
+
+@keyframes flap-left {
+
+    from {
+
+        transform:
+            rotateY(0deg)
+            rotate(-8deg);
+
+    }
+
+    to {
+
+        transform:
+            rotateY(55deg)
+            rotate(-8deg);
+
+    }
+
+}
+
+
+@keyframes flap-right {
+
+    from {
+
+        transform:
+            rotateY(0deg)
+            rotate(8deg);
+
+    }
+
+    to {
+
+        transform:
+            rotateY(-55deg)
+            rotate(8deg);
+
+    }
+
+}
+
+
+/* ==================================================
+   INTRO BUTTERFLY
+================================================== */
+
+
+.intro-butterfly {
+
+    left: 15%;
+
+    top: 25%;
+
+    animation:
+        intro-flight
+        7s
+        ease-in-out
+        infinite;
+
+}
+
+
+@keyframes intro-flight {
+
+    0% {
+
+        transform:
+            translate(0, 0)
+            rotate(-5deg);
+
+    }
+
+    30% {
+
+        transform:
+            translate(120px, -60px)
+            rotate(7deg);
+
+    }
+
+    60% {
+
+        transform:
+            translate(250px, 20px)
+            rotate(-4deg);
+
+    }
+
+    100% {
+
+        transform:
+            translate(0, 0)
+            rotate(-5deg);
+
+    }
+
+}
+
+
+/* ==================================================
+   HEADER
+================================================== */
+
+
+.site-header {
+
+    padding:
+        30px 7%;
+
+    display: flex;
+
+    justify-content:
+        space-between;
+
+    align-items:
+        center;
+
+}
+
+
+.site-header h2 {
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-weight: 400;
+
+}
+
+
+.text-button {
+
+    background: none;
+
+    border: none;
+
+    color: var(--muted);
+
+    cursor: pointer;
+
+}
+
+
+/* ==================================================
+   GARDEN
+================================================== */
+
+
+.garden {
+
+    min-height: 85vh;
+
+    position: relative;
+
+    padding:
+        80px 7%;
+
+    overflow: hidden;
+
+}
+
+
+.garden-heading {
+
+    text-align: center;
+
+    position: relative;
+
+    z-index: 5;
+
+}
+
+
+.garden-heading h1 {
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size:
+        clamp(45px, 7vw, 80px);
+
+    font-weight: 400;
+
+    margin-bottom: 15px;
+
+}
+
+
+.garden-heading p:last-child {
+
+    color: var(--muted);
+
+}
+
+
+/* ==================================================
+   FLOWER AREA
+================================================== */
+
+
+.garden-area {
+
+    position: relative;
+
+    max-width: 1000px;
+
+    height: 500px;
+
+    margin:
+        20px auto;
+
+}
+
+
+/* ==================================================
+   FLOWER
+================================================== */
+
+
+.flower-wrapper {
+
+    position: absolute;
+
+    width: 130px;
+
+    text-align: center;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.6s
+        cubic-bezier(.2,.8,.2,1);
+
+}
+
+
+.flower-wrapper:hover {
+
+    transform:
+        translateY(-15px)
+        scale(1.05);
+
+}
+
+
+.flower {
+
+    position: relative;
+
+    width: 110px;
+
+    height: 150px;
+
+    margin: auto;
+
+}
+
+
+.petal {
+
+    position: absolute;
+
+    width: 38px;
+
+    height: 58px;
+
+    left: 36px;
+
+    top: 20px;
+
+    border-radius:
+        60% 40% 60% 40%;
+
+    transform-origin:
+        50% 75%;
