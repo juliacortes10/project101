@@ -20,7 +20,7 @@ const portfolio = {
     /* ABOUT ME */
 
     about:
-        "Hello! I'm Your Name. This portfolio is a collection of my experiences, projects, interests, and the things I have learned along the way.",
+        "Hello! I'm Julia Amor. This portfolio is a collection of my experiences, projects, interests, and the things I have learned along the way.",
 
 
 
