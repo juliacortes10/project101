@@ -642,3 +642,613 @@ button {
 
     transform-origin:
         50% 75%;
+transition:
+        transform 0.8s ease;
+
+}
+
+
+.petal.one {
+
+    background: var(--rose);
+
+    transform:
+        rotate(0deg);
+
+}
+
+
+.petal.two {
+
+    background: var(--lavender);
+
+    transform:
+        rotate(72deg);
+
+}
+
+
+.petal.three {
+
+    background: var(--peach);
+
+    transform:
+        rotate(144deg);
+
+}
+
+
+.petal.four {
+
+    background: var(--rose);
+
+    transform:
+        rotate(216deg);
+
+}
+
+
+.petal.five {
+
+    background: var(--lavender);
+
+    transform:
+        rotate(288deg);
+
+}
+
+
+.flower-center {
+
+    position: absolute;
+
+    width: 25px;
+
+    height: 25px;
+
+    border-radius: 50%;
+
+    background: #e5c88d;
+
+    left: 43px;
+
+    top: 58px;
+
+    z-index: 5;
+
+}
+
+
+.stem {
+
+    position: absolute;
+
+    width: 4px;
+
+    height: 90px;
+
+    background: var(--sage);
+
+    left: 54px;
+
+    top: 70px;
+
+    border-radius: 20px;
+
+}
+
+
+.flower-wrapper:hover .petal.one {
+
+    transform:
+        rotate(-8deg)
+        translateY(-5px);
+
+}
+
+
+.flower-wrapper:hover .petal.two {
+
+    transform:
+        rotate(64deg)
+        translateY(-5px);
+
+}
+
+
+.flower-wrapper:hover .petal.three {
+
+    transform:
+        rotate(136deg)
+        translateY(-5px);
+
+}
+
+
+.flower-wrapper:hover .petal.four {
+
+    transform:
+        rotate(208deg)
+        translateY(-5px);
+
+}
+
+
+.flower-wrapper:hover .petal.five {
+
+    transform:
+        rotate(280deg)
+        translateY(-5px);
+
+}
+
+
+.flower-number {
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    color: var(--muted);
+
+}
+
+
+.flower-name {
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size: 20px;
+
+    margin-top: 7px;
+
+}
+
+
+/* ==================================================
+   BUTTERFLY IN GARDEN
+================================================== */
+
+
+.garden-butterfly {
+
+    left: 46%;
+
+    top: 52%;
+
+    transition:
+        left 1.3s
+        cubic-bezier(.2,.8,.2,1),
+
+        top 1.3s
+        cubic-bezier(.2,.8,.2,1),
+
+        transform 1.3s ease;
+
+}
+
+
+/* ==================================================
+   SUBJECT PAGE
+================================================== */
+
+
+.subject-page {
+
+    min-height: 100vh;
+
+    padding:
+        50px 8%;
+
+}
+
+
+.back-button {
+
+    border: none;
+
+    background: transparent;
+
+    color: var(--muted);
+
+    cursor: pointer;
+
+    margin-bottom: 80px;
+
+}
+
+
+.subject-inner {
+
+    max-width: 950px;
+
+    margin: auto;
+
+}
+
+
+.subject-inner h1 {
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size:
+        clamp(60px, 10vw, 120px);
+
+    font-weight: 400;
+
+    line-height: 0.95;
+
+    margin-bottom: 30px;
+
+}
+
+
+.large-description {
+
+    max-width: 700px;
+
+    color: var(--muted);
+
+    line-height: 1.9;
+
+    font-size: 18px;
+
+}
+
+
+.info-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 25px;
+
+    margin-top: 70px;
+
+}
+
+
+.info-card {
+
+    padding: 35px;
+
+    background:
+        rgba(255,255,255,0.5);
+
+    border-radius: 25px;
+
+    box-shadow: var(--shadow);
+
+}
+
+
+.card-label {
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    color: var(--rose-dark);
+
+    margin-bottom: 15px;
+
+}
+
+
+.info-card > p:last-child {
+
+    color: var(--muted);
+
+    line-height: 1.8;
+
+}
+
+
+/* ==================================================
+   ABOUT
+================================================== */
+
+
+.about-page {
+
+    min-height: 100vh;
+
+    padding:
+        50px 8%;
+
+}
+
+
+.about-inner {
+
+    max-width: 850px;
+
+    margin:
+        100px auto;
+
+}
+
+
+.about-inner h1 {
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size:
+        clamp(60px, 10vw, 110px);
+
+    font-weight: 400;
+
+    margin-bottom: 30px;
+
+}
+
+
+.about-inner p:last-child {
+
+    line-height: 2;
+
+    color: var(--muted);
+
+    max-width: 650px;
+
+}
+
+
+/* ==================================================
+   TRANSITION
+================================================== */
+
+
+.transition {
+
+    position: fixed;
+
+    inset: 0;
+
+    background: var(--cream);
+
+    z-index: 1000;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    pointer-events: none;
+
+    opacity: 0;
+
+}
+
+
+.transition.active {
+
+    opacity: 1;
+
+}
+
+
+.transition-flower {
+
+    position: relative;
+
+    width: 80px;
+
+    height: 80px;
+
+    transform:
+        scale(0);
+
+}
+
+
+.transition.active
+.transition-flower {
+
+    animation:
+        bloom 1.2s
+        cubic-bezier(.2,.8,.2,1)
+        forwards;
+
+}
+
+
+.transition-flower span {
+
+    position: absolute;
+
+    width: 65px;
+
+    height: 100px;
+
+    left: 8px;
+
+    top: -10px;
+
+    border-radius: 60% 40% 60% 40%;
+
+}
+
+
+.transition-flower span:nth-child(1) {
+
+    background: var(--rose);
+
+}
+
+
+.transition-flower span:nth-child(2) {
+
+    background: var(--lavender);
+
+    transform:
+        rotate(72deg);
+
+}
+
+
+.transition-flower span:nth-child(3) {
+
+    background: var(--peach);
+
+    transform:
+        rotate(144deg);
+
+}
+
+
+.transition-flower span:nth-child(4) {
+
+    background: var(--rose);
+
+    transform:
+        rotate(216deg);
+
+}
+
+
+.transition-flower span:nth-child(5) {
+
+    background: var(--lavender);
+
+    transform:
+        rotate(288deg);
+
+}
+
+
+.transition-flower div {
+
+    position: absolute;
+
+    width: 30px;
+
+    height: 30px;
+
+    background: #e5c88d;
+
+    border-radius: 50%;
+
+    left: 25px;
+
+    top: 25px;
+
+    z-index: 3;
+
+}
+
+
+@keyframes bloom {
+
+    0% {
+
+        transform:
+            scale(0)
+            rotate(-30deg);
+
+    }
+
+    60% {
+
+        transform:
+            scale(8)
+            rotate(20deg);
+
+    }
+
+    100% {
+
+        transform:
+            scale(25)
+            rotate(40deg);
+
+    }
+
+}
+
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+
+@media (max-width: 700px) {
+
+
+    .intro h1 {
+
+        font-size: 58px;
+
+    }
+
+
+    .site-header {
+
+        padding:
+            25px;
+
+    }
+
+
+    .garden {
+
+        padding:
+            70px 20px;
+
+    }
+
+
+    .garden-area {
+
+        height: 650px;
+
+    }
+
+
+    .flower-wrapper {
+
+        width: 110px;
+
+    }
+
+
+    .flower-name {
+
+        font-size: 17px;
+
+    }
+
+
+    .info-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .subject-page {
+
+        padding:
+            35px 25px;
+
+    }
+
+
+    .subject-inner h1 {
+
+        font-size: 60px;
+
+    }
+
+
+}
